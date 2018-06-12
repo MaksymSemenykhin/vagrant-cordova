@@ -42,8 +42,13 @@ export ANDROID_HOME=$ANDROID_HOME
 echo "export ANDROID_HOME=$ANDROID_HOME" >> /etc/bash.bashrc
 export PATH=$PATH:$ANDROID_HOME/bin
 export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/platforms:$ANDROID_HOME/build-tools/28.0.8/
 echo "export PATH=$PATH:$ANDROID_HOME/platforms:$ANDROID_HOME/build-tools/28.0.8/" >> /etc/bash.bashrc
+
+cp /image/config/android-tool.cfg  /opt/jdk/jdk1.8.0_171/lib/net.properties
+echo "systemProp.http.proxyHost=10.88.20.11" >> ~/.gradle/gradle.properties ; echo "systemProp.http.proxyPort=8080" >> ~/.gradle/gradle.properties ;echo "systemProp.https.proxyHost=10.88.20.11" >> ~/.gradle/gradle.properties;echo "systemProp.https.proxyPort=8080" >> ~/.gradle/gradle.properties
+
 source /etc/bash.bashrc
 
 

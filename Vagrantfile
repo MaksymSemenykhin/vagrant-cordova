@@ -35,6 +35,18 @@ Vagrant.configure(2) do |config|
 
     #https://stackoverflow.com/questions/24200333/symbolic-links-and-synced-folders-in-vagrant
     vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
+    vb.customize ["modifyvm", :id, "--usb", "on"]
+    vb.customize ["usbfilter", "add", "0",
+        "--target", :id,
+        "--action", "hold",
+        "--name", "hey hey"
+    ]
+
+    if Vagrant.has_plugin?("vagrant-proxyconf") && options['proxy_use'] == true
+        config.proxy.http     = options['proxy_http']
+        config.proxy.https    = options['proxy_https']
+        config.proxy.no_proxy = options['no_proxy']
+    end
 
   end
 
@@ -55,8 +67,9 @@ Vagrant.configure(2) do |config|
   # provisioners
   config.vm.provision 'shell', path: './vagrant/provision/once-as-root.sh'
   config.vm.provision 'shell', path: './vagrant/provision/once-as-vagrant.sh', args: [], privileged: false
+  config.vm.provision 'shell', path: './vagrant/provision/android.sh'
 
-#  config.vm.provision 'shell', path: './vagrant/provision/always-as-root.sh', run: 'always'
+  config.vm.provision 'shell', path: './vagrant/provision/always-as-root.sh', run: 'always'
 #  config.vm.provision 'shell', path: './vagrant/provision/always-as-vagrant.sh', run: 'always', privileged: false
 
 
