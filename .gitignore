@@ -2,3 +2,4 @@
 /nbproject
 /vagrant/config/vagrant-local.yml
 .vagrant/
+app

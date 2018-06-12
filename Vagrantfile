@@ -15,6 +15,8 @@ FileUtils.cp config[:example], config[:local] unless File.exist?(config[:local])
 # read config
 options = YAML.load_file config[:local]
 
+
+
 # vagrant configurate
 Vagrant.configure(2) do |config|
   # select the box
@@ -30,6 +32,10 @@ Vagrant.configure(2) do |config|
     vb.memory = options['memory']
     # machine name (for VirtualBox UI)
     vb.name = options['machine_name']
+
+    #https://stackoverflow.com/questions/24200333/symbolic-links-and-synced-folders-in-vagrant
+    vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
+
   end
 
   # machine name (for vagrant console)

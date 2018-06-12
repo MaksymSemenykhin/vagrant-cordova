@@ -35,14 +35,14 @@ print_title "Install additional software"
 
 # Install Node.js 7.x repository
 curl -sL https://deb.nodesource.com/setup_6.x | bash -
-
+npm install cordova -g
 # Install Node.js and npm
 apt-get install -qqy nodejs
 
 apt-get install git curl vim mc htop dstat -yqq jq
 apt-get install php-cli -yqq
 
-
+apt-get install gradle -yqq
 apt-get install zip -yqq
 
 
