@@ -1,0 +1,4 @@
+.idea/
+/nbproject
+/vagrant/config/vagrant-local.yml
+.vagrant/

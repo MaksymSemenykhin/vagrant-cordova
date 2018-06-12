@@ -1,0 +1,30 @@
+# Guest OS timezone
+timezone:  Europe/Kiev
+
+# Are we need check box updates for every 'vagrant up'?
+box_check_update: false
+
+# Virtual machine name
+machine_name: ilr-workstation
+
+# Virtual machine IP
+ip: 192.168.83.137
+
+# Virtual machine CPU cores number
+cpus: 2
+
+# Virtual machine RAM
+memory: 2048
+
+# Virtual machine swap
+swap: 2048
+
+vmbox: 'bento/ubuntu-16.04'
+
+
+# proxy settings
+# use it if you have installed vagrant-proxyconf
+proxy_use: false
+proxy_http: "http://host:port/"
+proxy_https: "http://host:port/"
+no_proxy: "localhost,127.0.0.1,.example.com,ffa-workstation.local,192.168.83.137,192.168.83.1"
