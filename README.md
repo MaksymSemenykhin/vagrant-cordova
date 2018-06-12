@@ -38,3 +38,6 @@ What you get
 3. Synced folder './' => '/app'
 4. JDK 8, Android-sdk, cordova-cli 
 
+
+Additionally, on windows vagrant up needs to be executed in a shell with admin rights. No workarounds necessary.
+
