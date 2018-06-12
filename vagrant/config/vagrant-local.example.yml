@@ -24,4 +24,4 @@ vmbox: 'bento/ubuntu-16.04'
 proxy_use: false
 proxy_http: "http://host:port/"
 proxy_https: "http://host:port/"
-no_proxy: "localhost,127.0.0.1,.example.com,ffa-workstation.local,192.168.83.137,192.168.83.1"
+no_proxy: "localhost,127.0.0.1,.example.com,192.168.83.137,192.168.83.1"
