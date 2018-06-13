@@ -40,7 +40,7 @@ What you get
 2. Synced folder './vagrant/config' => '/image/config' with all configs
 3. Synced folder './' => '/app'
 4. JDK 8, Android-sdk, cordova-cli 
-5. Proxyed usd to linux adb
+5. Proxyed usи ports to linux adb
 
 
 
