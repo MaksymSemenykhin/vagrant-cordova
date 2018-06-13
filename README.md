@@ -13,25 +13,37 @@ INSTALLATION REQUIREMENTS
 INSTALLATION
 ------------
 1. Install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-2. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-3. Install [vagrant](https://www.vagrantup.com/)
-4. Install [vagrant hostmanager pulugin](https://github.com/devopsgroup-io/vagrant-hostmanager)
-5. Install [vagrant proxyconf pulugin](https://github.com/tmatilai/vagrant-proxyconf) if you need to use proxy
-6. Copy ./vagrant/config/vagrant-local.example.yml as ./vagrant/config/vagrant-local.yml
-7. Setup proxy in system variables and restart your console. In needed
-8. Take a short look at vagrant-local.yml settings if all ok
-9. Start [vagrant](https://www.vagrantup.com/docs/getting-started/)
-101. Reload vagrant
-
-Additionally, on windows vagrant up needs to be executed in a shell with admin rights. No workarounds necessary.
-Additionally, use adb under root user
-
-```sh
-$ vagrant plugin install vagrant-hostmanager
-$ vagrant plugin install vagrant-proxyconf
-$ vagrant up
-$ vagrant reload
-$ vagrant global-status
+2. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads - VirtualBox 5.x.xx platform packages - Windows hosts)
+3. Install [VirtualBox Extension Pack](https://www.virtualbox.org/wiki/Downloads - VirtualBox 5.x.xx Oracle VM VirtualBox Extension Pack)
+4. Install [Vagrant](https://www.vagrantup.com/downloads.html) - Windows x64 bit
+5. Install [vagrant hostmanager pulugin](https://github.com/devopsgroup-io/vagrant-hostmanager)
+6. Install [vagrant proxyconf pulugin](https://github.com/tmatilai/vagrant-proxyconf) if you need to use proxy
+7. Create on C: or D: folder Virtual (as example D:/Virtual)
+8. Clone this repo content to folder Virtual and go to this folder.
+9. In Virtual folder copy ./vagrant/config/vagrant-local.example.yml as ./vagrant/config/vagrant-local.yml
+10. Setup proxy in system variables and restart your console. If needed.
+11. Take a short look at vagrant-local.yml settings if all ok (Use proxy or not, CPU, Memory, hostname, etc)
+12. Run cmd as Administrator & go to folder Virtual:
+```bash
+cd D:
+cd Virtual
+```
+13. Init [Vagrant]
+```bash
+vagrant init hashicorp/precise64
+```
+14. Install Vagrant plugins:
+```bash
+vagrant plugin install vagrant-hostmanager
+vagrant plugin install vagrant-proxyconf
+```
+14. Start Android local env deploy
+```bash
+vagrant up
+```
+15. Wait 10-15 min & check correct VM work:
+```bash
+vagrant global-status
 ```
 
 What you get
@@ -40,7 +52,7 @@ What you get
 2. Synced folder './vagrant/config' => '/image/config' with all configs
 3. Synced folder './' => '/app'
 4. JDK 8, Android-sdk, cordova-cli 
-5. Proxyed usи ports to linux adb
+5. Proxyed use ports to linux adb
 
 
 
