@@ -87,6 +87,7 @@ echo "export PATH=$PATH" >> /etc/bash.bashrc
 
 cp ~/.android/androidtool.cfg /opt/jdk/jdk1.8.0_171/lib/net.properties
 
+touch ~/.gradle/gradle.properties
 cat >~/.gradle/gradle.properties<<EOL
 systemProp.http.proxyHost=${proxy_host_http}
 systemProp.http.proxyPort=${proxy_port_http}
