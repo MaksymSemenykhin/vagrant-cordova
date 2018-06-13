@@ -35,7 +35,7 @@ Vagrant.configure(2) do |config|
 
     #https://stackoverflow.com/questions/24200333/symbolic-links-and-synced-folders-in-vagrant
     vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
-    vb.customize ["modifyvm", :id, "--usb", "on", "--usbxhci", "off"]
+    vb.customize ["modifyvm", :id, "--usb", "on", "--usbxhci", "on"]
     vb.customize ["usbfilter", "add", "0",
         "--target", :id,
         "--action", "hold",
