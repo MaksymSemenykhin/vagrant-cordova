@@ -4,6 +4,7 @@ INSTALLATION REQUIREMENTS
   - VirtualBox
   - Vagrant
   - Vagrant hostmanager pulugin
+  - Vagrant proxyconf pulugin
   - console or terminal
   - 512 Memory 
   - 1 Gb of free space
@@ -19,9 +20,10 @@ INSTALLATION
 6. Copy ./vagrant/config/vagrant-local.example.yml as ./vagrant/config/vagrant-local.yml
 7. Setup proxy in system variables and restart your console. In needed
 8. Take a short look at vagrant-local.yml settings if all ok
-9. Take a short look at android-tool.cfg settings if all ok
-10. Start [vagrant](https://www.vagrantup.com/docs/getting-started/)
-11. Reload vagrant
+9. Start [vagrant](https://www.vagrantup.com/docs/getting-started/)
+101. Reload vagrant
+
+Additionally, on windows vagrant up needs to be executed in a shell with admin rights. No workarounds necessary.
 
 ```sh
 $ vagrant plugin install vagrant-hostmanager
@@ -37,7 +39,7 @@ What you get
 2. Synced folder './vagrant/config' => '/image/config' with all configs
 3. Synced folder './' => '/app'
 4. JDK 8, Android-sdk, cordova-cli 
+5. Proxyed usd to linux adb
 
 
-Additionally, on windows vagrant up needs to be executed in a shell with admin rights. No workarounds necessary.
 
