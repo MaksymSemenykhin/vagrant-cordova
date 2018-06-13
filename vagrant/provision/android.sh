@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 source /image/provision/output.sh
 source /image/provision/functions.sh
 
