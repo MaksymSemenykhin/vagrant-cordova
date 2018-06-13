@@ -24,6 +24,7 @@ INSTALLATION
 101. Reload vagrant
 
 Additionally, on windows vagrant up needs to be executed in a shell with admin rights. No workarounds necessary.
+Additionally, use adb under root user
 
 ```sh
 $ vagrant plugin install vagrant-hostmanager
