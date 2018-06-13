@@ -95,20 +95,5 @@ systemProp.https.proxyHost=${proxy_host_https}
 systemProp.https.proxyPort=${proxy_port_https}
 EOL
 
-
 source /etc/bash.bashrc
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 print_title "Done | android"
