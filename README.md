@@ -13,8 +13,8 @@ INSTALLATION REQUIREMENTS
 INSTALLATION
 ------------
 1. Install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-2. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads - VirtualBox 5.x.xx platform packages - Windows hosts)
-3. doanload and save on disk [VirtualBox Extension Pack](https://www.virtualbox.org/wiki/Downloads - VirtualBox 5.x.xx Oracle VM VirtualBox Extension Pack):
+2. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) - VirtualBox 5.x.xx platform packages - Windows hosts
+3. doanload and save on disk [VirtualBox Extension Pack](https://www.virtualbox.org/wiki/Downloads) - VirtualBox 5.x.xx Oracle VM VirtualBox Extension Pack:
    [Install instrisction](https://www.smarthomebeginner.com/install-virtualbox-extension-pack-on-linux-windows/) - from part Install VirtualBox Extension Pack 
 4. Install [Vagrant](https://www.vagrantup.com/downloads.html) - Windows x64 bit
 5. Install [vagrant hostmanager pulugin](https://github.com/devopsgroup-io/vagrant-hostmanager)
