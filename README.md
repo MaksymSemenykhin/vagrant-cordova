@@ -1,14 +1,24 @@
+
+This box will contain
+------------
+1. JDK 8, Android-sdk, cordova-cli 
+2. Proxyed usb ports to linux adb
+3. Synced folder './' => '/app' place where you can put your cordova project
+4. Synced folder './vagrant/provision' => '/image/provision' with all provisions, vagrant start up scripts
+5. Synced folder './vagrant/config' => '/image/config' with all configs
+
 INSTALLATION REQUIREMENTS
 ------------
   - GIT
   - VirtualBox
+  - VirtualBox extension pack
   - Vagrant
   - Vagrant hostmanager pulugin
   - Vagrant proxyconf pulugin
   - console or terminal
   - 512 Memory 
   - 1 Gb of free space
-  - One hour of time 
+  - 10-15 minutes
   
 INSTALLATION
 ------------
@@ -42,14 +52,3 @@ vagrant up
 ```bash
 vagrant global-status
 ```
-
-What you get
-------------
-1. Synced folder './vagrant/provision' => '/image/provision' with all provisions, vagrant start up scripts
-2. Synced folder './vagrant/config' => '/image/config' with all configs
-3. Synced folder './' => '/app'
-4. JDK 8, Android-sdk, cordova-cli 
-5. Proxyed usb ports to linux adb
-
-
-
