@@ -29,11 +29,7 @@ INSTALLATION
 cd D:
 cd Virtual
 ```
-13. Init [Vagrant]
-```bash
-vagrant init hashicorp/precise64
-```
-14. Install Vagrant plugins:
+13. Install Vagrant plugins:
 ```bash
 vagrant plugin install vagrant-hostmanager
 vagrant plugin install vagrant-proxyconf
